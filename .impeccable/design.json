@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T09:01:29.382295+00:00",
+  "title": "Design System: Stead",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Warm Canvas"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Ivory Surface"
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Warm Rail"
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "Neutral Hover"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Olive Ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Olive Gray"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine Divider"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Deep Olive"
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Dark Olive"
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Pale Olive"
+      },
+      "on-accent": {
+        "role": "neutral",
+        "displayName": "White on Olive"
+      },
+      "warning": {
+        "role": "semantic",
+        "displayName": "Amber Warning"
+      },
+      "warning-soft": {
+        "role": "semantic",
+        "displayName": "Pale Amber"
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Muted Red"
+      },
+      "danger-soft": {
+        "role": "semantic",
+        "displayName": "Pale Red"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Serif Introduction",
+        "purpose": "Empty-conversation introduction; shared family and size with desktop wordmark."
+      },
+      "headline": {
+        "displayName": "Serif Panel Headline",
+        "purpose": "Task, notes and responsibility introductions."
+      },
+      "body": {
+        "displayName": "Reading Text",
+        "purpose": "Conversation and Markdown prose; compact descriptions shorten the line height."
+      },
+      "code": {
+        "displayName": "Code and Raw Files",
+        "purpose": "Inspectable source text."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "color-transition",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Shared buttons, icon controls and task rows."
+      },
+      {
+        "name": "loading-spin",
+        "value": "spin 1s linear infinite",
+        "purpose": "Loading indicator; disabled for reduced motion."
+      },
+      {
+        "name": "thinking-pulse",
+        "value": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "purpose": "Busy conversation dot; disabled for reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Global animation and transition duration when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      },
+      {
+        "name": "xl",
+        "value": "80rem"
+      },
+      {
+        "name": "2xl",
+        "value": "96rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Existing shared primary action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Start task</button>",
+      "css": ".ds-button-primary{display:inline-flex;min-height:2.5rem;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:.5rem;padding:.5rem .875rem;font-family:var(--font-sans);font-size:.875rem;font-weight:500;line-height:1.25rem;cursor:pointer;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1);background:var(--color-accent);color:var(--color-on-accent)}.ds-button-primary:hover{background:var(--color-accent-hover)}.ds-button-primary:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-button-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Existing shared secondary action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-secondary\">Send direction</button>",
+      "css": ".ds-button-secondary{display:inline-flex;min-height:2.5rem;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:.5rem;padding:.5rem .875rem;font-family:var(--font-sans);font-size:.875rem;font-weight:500;line-height:1.25rem;cursor:pointer;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1);border:1px solid var(--color-line);background:var(--color-surface);color:var(--color-ink)}.ds-button-secondary:hover{background:var(--color-canvas)}.ds-button-secondary:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-button-secondary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Existing shared quiet action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-quiet\">Cancel</button>",
+      "css": ".ds-button-quiet{display:inline-flex;min-height:2.5rem;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:.5rem;padding:.5rem .875rem;font-family:var(--font-sans);font-size:.875rem;font-weight:500;line-height:1.25rem;cursor:pointer;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1);background:transparent;color:var(--color-muted)}.ds-button-quiet:hover{background:var(--color-hover);color:var(--color-ink)}.ds-button-quiet:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-button-quiet:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-quiet{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Existing shared danger action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-danger\">Remove</button>",
+      "css": ".ds-button-danger{display:inline-flex;min-height:2.5rem;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:.5rem;padding:.5rem .875rem;font-family:var(--font-sans);font-size:.875rem;font-weight:500;line-height:1.25rem;cursor:pointer;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1);background:var(--color-danger-soft);color:var(--color-danger)}.ds-button-danger:hover{background:var(--color-danger);color:white}.ds-button-danger:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-button-danger:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Shared task, note and responsibility field styling.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-task-name\">Task name</label><input class=\"ds-field\" id=\"ds-task-name\" placeholder=\"A useful name for this work\">",
+      "css": ".ds-field-label{display:block;margin-bottom:.5rem;font-family:var(--font-sans);font-size:.875rem;font-weight:500;color:var(--color-ink)}.ds-field{width:100%;border:1px solid var(--color-line);border-radius:.5rem;background:var(--color-surface);padding:.625rem .75rem;font-family:var(--font-sans);font-size:.875rem;line-height:1.25rem;color:var(--color-ink);caret-color:var(--color-accent)}.ds-field::placeholder{color:var(--color-muted);opacity:.85}.ds-field:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-field:disabled{opacity:.5}"
+    },
+    {
+      "name": "Selected Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-selected",
+      "description": "Surface-filled selection within the warm navigation rail.",
+      "html": "<nav class=\"ds-rail\"><button class=\"ds-nav\" aria-current=\"page\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z\"/></svg>Conversation</button></nav>",
+      "css": ".ds-rail{background:var(--color-rail);padding:.75rem}.ds-nav{display:flex;min-height:2.75rem;width:100%;align-items:center;gap:.75rem;border:0;border-radius:.5rem;padding:0 .75rem;background:transparent;color:var(--color-muted);font-family:var(--font-sans);font-size:.875rem;font-weight:500;cursor:pointer}.ds-nav:hover{background:var(--color-hover)}.ds-nav[aria-current=page]{background:var(--color-surface);color:var(--color-ink)}.ds-nav:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}"
+    },
+    {
+      "name": "Task Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-positive",
+      "description": "Written status distinguishes running from completed even though both use olive.",
+      "html": "<span class=\"ds-badge\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>Working</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:.375rem;border-radius:.375rem;padding:.25rem .5rem;background:var(--color-accent-soft);color:var(--color-accent);font-family:var(--font-sans);font-size:.75rem;font-weight:500;line-height:1}.ds-dot{width:.375rem;height:.375rem;border-radius:9999px;background:currentColor}"
+    },
+    {
+      "name": "Saved Correction",
+      "kind": "card",
+      "refersTo": "correction-card",
+      "description": "Canvas inset card with explicit correction state.",
+      "html": "<div class=\"ds-correction\"><p class=\"ds-correction-text\">Focus on the sources we discussed.</p><span class=\"ds-correction-status\">Applied</span></div>",
+      "css": ".ds-correction{border-radius:.5rem;background:var(--color-canvas);padding:.75rem;color:var(--color-ink);font-family:var(--font-sans)}.ds-correction-text{margin:0;white-space:pre-wrap;font-size:.875rem;line-height:1.5rem}.ds-correction-status{display:inline-flex;margin-top:.5rem;border-radius:.375rem;background:var(--color-accent-soft);color:var(--color-accent);padding:.25rem .5rem;font-size:.75rem;font-weight:500;line-height:1}"
+    },
+    {
+      "name": "Conversation Composer",
+      "kind": "custom",
+      "refersTo": "composer",
+      "description": "The existing multiline entry surface, shown with an unavailable send action for its empty state.",
+      "html": "<div class=\"ds-composer\"><label class=\"ds-composer-label\" for=\"ds-message\">Message Stead</label><textarea id=\"ds-message\" class=\"ds-message\" rows=\"2\" placeholder=\"Tell Stead what you\u2019re thinking\u2026\"></textarea><div class=\"ds-composer-footer\"><span>Enter to send \u00b7 Shift + Enter for a new line</span><button class=\"ds-send\" aria-label=\"Send message\" disabled><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 7-7 7 7M12 19V5\"/></svg></button></div></div>",
+      "css": ".ds-composer{border:1px solid var(--color-line);border-radius:.75rem;background:var(--color-canvas);padding:.75rem;font-family:var(--font-sans)}.ds-composer:focus-within{border-color:var(--color-accent)}.ds-composer-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.ds-message{display:block;max-height:10rem;min-height:3.75rem;width:100%;resize:vertical;border:0;background:transparent;padding:.25rem;color:var(--color-ink);font-family:var(--font-sans);font-size:.875rem;line-height:1.5rem;outline:none;caret-color:var(--color-accent)}.ds-message::placeholder{color:var(--color-muted);opacity:.85}.ds-composer-footer{display:flex;align-items:center;justify-content:space-between;margin-top:.25rem;color:var(--color-muted);font-size:.75rem;gap:.5rem}.ds-send{display:inline-flex;width:2.5rem;height:2.5rem;flex-shrink:0;align-items:center;justify-content:center;border:0;border-radius:.5rem;background:var(--color-accent);color:var(--color-on-accent)}.ds-send:hover{background:var(--color-accent-hover)}.ds-send:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}.ds-send:disabled{opacity:.45;cursor:not-allowed}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The personal workbench",
+    "overview": "Stead uses warm neutral surfaces, deep olive controls, fine dividers and compact utility chrome. A restrained serif wordmark and conversational introductions provide identity; familiar system sans typography carries task and file content. The surface direction is recorded in `apps/client/.impeccable/surfaces/apps-client-src-app-workspace-tsx.md`.\n\nThis documents the implemented frontend. Tokens come from `packages/ui/src/theme.css`; shared controls come from `packages/ui/src/index.tsx`. Client styles and feature components supply layout and behavior. The interface ships no raster assets: its leaf mark and utility icons are SVG.",
+    "keyCharacteristics": [
+      "Warm neutral planes with olive actions.",
+      "Serif introductions and compact sans utility text.",
+      "Flat panels, fine dividers and modest rounded controls.",
+      "Continuing conversation beside inspectable work."
+    ],
+    "rules": [],
+    "dos": [
+      "Do reuse the shared theme and control variants.",
+      "Do pair status color with readable labels and retain separate connection and task states.",
+      "Do preserve the mounted conversation while navigating work and files.",
+      "Do use the existing focus treatment and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't turn reply completion or connection health into a completed-task signal.",
+      "Don't replace explicit task resume with automatic resume when the workspace opens.",
+      "Don't introduce a second visual system for notes, files or task controls."
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "@stead/ui/theme.css";
+@source "../../../packages/ui/src";
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line) transparent;
+  }
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+  button:not(:disabled),
+  a,
+  summary {
+    cursor: pointer;
+  }
+  input,
+  textarea {
+    caret-color: var(--color-accent);
+  }
+  ::selection {
+    background: var(--color-accent-soft);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  ::placeholder {
+    color: var(--color-muted);
+    opacity: 0.85;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

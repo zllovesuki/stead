@@ -1,0 +1,21 @@
+@theme {
+  --color-canvas: #f5f4ef;
+  --color-surface: #fffefa;
+  --color-rail: #eeede6;
+  --color-hover: #e7e7de;
+  --color-ink: #282c24;
+  --color-muted: #626659;
+  --color-line: #dddfd2;
+  --color-accent: #485c35;
+  --color-accent-hover: #344727;
+  --color-accent-soft: #e6eddd;
+  --color-on-accent: #ffffff;
+  --color-warning: #805923;
+  --color-warning-soft: #f4e8cf;
+  --color-danger: #9d3934;
+  --color-danger-soft: #f8e7e2;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+}

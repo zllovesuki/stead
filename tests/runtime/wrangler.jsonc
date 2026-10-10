@@ -1,0 +1,22 @@
+{
+  "name": "stead-runtime-tests",
+  "main": "../fixtures/worker.ts",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "worker_loaders": [{ "binding": "LOADER" }],
+  "durable_objects": {
+    "bindings": [
+      { "name": "PERSONAL_AGENT", "class_name": "PersonalAgent" },
+      { "name": "TEST_TASK", "class_name": "TaskAgent" },
+      { "name": "MODEL_GATE", "class_name": "ModelGate" },
+    ],
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["PersonalAgent", "ModelGate"] },
+  ],
+  "vars": {
+    "PREVIEW_TOKEN": "stead-test-preview-password",
+    "GATEWAY_ID": "test-no-inference",
+    "MODEL": "@cf/zai-org/glm-5.3-flash",
+  },
+}

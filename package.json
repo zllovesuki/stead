@@ -1,0 +1,39 @@
+{
+  "name": "stead",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.1.0",
+  "engines": {
+    "node": ">=24.14.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @stead/client dev",
+    "build": "pnpm --filter @stead/client build",
+    "types": "pnpm --filter @stead/server types",
+    "typecheck": "pnpm -r typecheck && tsc -p tests/runtime/tsconfig.json && tsc -p tests/browser/tsconfig.json",
+    "lint": "eslint apps packages tests *.ts *.mjs",
+    "test": "vitest run",
+    "test:browser": "playwright test",
+    "format": "prettier --write apps packages tests *.json *.yaml *.mjs *.ts README.md IMPLEMENTATION.md PRODUCT.md DESIGN.md",
+    "format:check": "prettier --check apps packages tests *.json *.yaml *.mjs *.ts README.md IMPLEMENTATION.md PRODUCT.md DESIGN.md"
+  },
+  "devDependencies": {
+    "@babel/core": "8.0.5",
+    "@babel/eslint-parser": "8.0.5",
+    "@ai-sdk/provider": "4.0.26",
+    "@cloudflare/vitest-plugin": "1.1.10",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.13.5",
+    "eslint": "10.10.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.6",
+    "globals": "17.12.0",
+    "prettier": "3.9.7",
+    "typescript": "7.0.2",
+    "vite": "8.3.0",
+    "vitest": "4.1.11",
+    "wrangler": "4.149.0"
+  }
+}

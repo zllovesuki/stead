@@ -1,0 +1,16 @@
+{
+  "extends": "../../apps/server/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2024"],
+    "types": ["@cloudflare/vitest-plugin/types", "node"],
+    "paths": {
+      "@/server/*": ["../../apps/server/src/*"],
+      "@stead/contracts": ["../../packages/contracts/src/index.ts"]
+    }
+  },
+  "include": [
+    "./**/*.ts",
+    "../fixtures/**/*.ts",
+    "../../apps/server/worker-configuration.d.ts"
+  ]
+}

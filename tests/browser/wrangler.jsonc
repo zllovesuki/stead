@@ -1,0 +1,23 @@
+{
+  "name": "stead-browser-tests",
+  "main": "../../apps/server/src/index.ts",
+  "compatibility_date": "2026-10-09",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/agents/*"],
+  },
+  "worker_loaders": [{ "binding": "LOADER" }],
+  "durable_objects": {
+    "bindings": [{ "name": "PERSONAL_AGENT", "class_name": "PersonalAgent" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PersonalAgent"] }],
+  "vars": {
+    "PREVIEW_TOKEN": "stead-test-preview-password",
+    "GATEWAY_ID": "test-no-inference",
+    "MODEL": "@cf/zai-org/glm-5.3-flash",
+  },
+}

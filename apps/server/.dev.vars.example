@@ -1,0 +1,2 @@
+# Use a long random value for single-operator access. Never use a Cloudflare API token.
+PREVIEW_TOKEN=replace-with-a-long-random-preview-password
